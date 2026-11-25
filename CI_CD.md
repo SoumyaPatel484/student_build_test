@@ -1,13 +1,8 @@
 # CI/CD setup
 
 The GitHub Actions workflow runs on pushes to `main`. It builds and tests the
-project, then builds and pushes a Docker image to Docker Hub as both `latest`
-and the commit SHA.
-
-## Required repository secrets
-
-- `DOCKERHUB_USERNAME`
-- `DOCKERHUB_TOKEN`
+project, then builds the Docker image locally in the runner. It does not publish
+the image or require Docker Hub credentials.
 
 ## Local build and run
 
